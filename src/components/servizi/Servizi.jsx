@@ -9,7 +9,7 @@ const Servizi = () => {
       <h2>Servizi</h2>
 
       <div className="container servizi__container">
-        <article className="servizi">
+        <div className="servizi">
           <div className="servizi__head">
             <h3>UI/UX Design</h3>
           </div>
@@ -36,9 +36,9 @@ const Servizi = () => {
               <p>Possibilità di rivedere e migliorare parti del design.</p>
             </li>
           </ul>
-        </article>
+        </div>
 
-        <article className="servizi">
+        <div className="servizi">
           <div className="servizi__head">
             <h3>Sviluppo Siti Web</h3>
           </div>
@@ -69,9 +69,9 @@ const Servizi = () => {
               <p>Assistenza H24 in caso di qualsiasi problema.</p>
             </li>
           </ul>
-        </article>
+        </div>
 
-        <article className="servizi">
+        <div className="servizi">
           <div className="servizi__head">
             <h3>Riparazione Siti Web</h3>
           </div>
@@ -91,7 +91,7 @@ const Servizi = () => {
             </li>
            
           </ul>
-        </article>
+        </div>
       </div>
     </section>
   )

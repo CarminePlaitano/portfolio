@@ -57,7 +57,7 @@ const Portfolio = () => {
        {
          data.map(({id, image, title, github, demo}) => {
            return (
-            <article key={id} className="portfolio__item">
+            <div key={id} className="portfolio__item">
             <div className="portfolio__item-image">
               <img src={image} alt={title} />
             </div>
@@ -66,7 +66,7 @@ const Portfolio = () => {
               <div className="portfolio__item-cta">
               <a href={demo} className="btn btn-primary" target="_blank">Vai al Sito</a>
               </div>
-          </article>
+          </div>
            )
          })
        }

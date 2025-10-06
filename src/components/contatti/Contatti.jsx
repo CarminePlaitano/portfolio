@@ -24,24 +24,24 @@ const Contatti = () => {
 
         <div className="container contatti__container">
           <div className="contatti__options">
-            <article className="contatti__option">
+            <div className="contatti__option">
               <MdOutlineEmail className="contatti__option-icon" />
               <h4>Email</h4>
               <h5>c.plaitano@gmail.com</h5>
-              <a href="mailto:c.plaitano@gmail.com" target="_blank">Mandami un messaggio</a>
-            </article>
-            <article className="contatti__option">
+              <a href="mailto:c.plaitano@gmail.com" target="_blank" rel="noreferrer">Mandami un messaggio</a>
+            </div>
+            <div className="contatti__option">
               <RiMessengerLine className="contatti__option-icon" />
               <h4>Messenger</h4>
               <h5>Carmine Plaitano</h5>
-              <a href="https://m.me/carmine.plaitano.3" target="_blank">Mandami un messaggio</a>
-            </article>
-            <article className="contatti__option">
+              <a href="https://m.me/carmine.plaitano.3" target="_blank" rel="noreferrer">Mandami un messaggio</a>
+            </div>
+            <div className="contatti__option">
               <BsWhatsapp className="contatti__option-icon" />
               <h4>WhatsApp</h4>
               <h5>+39 327 206 1751</h5>
-              <a href="https://wa.me/<+393272061751>" target="_blank">Mandami un messaggio</a>
-            </article>
+              <a href="https://wa.me/<+393272061751>" target="_blank" rel="noreferrer">Mandami un messaggio</a>
+            </div>
           </div>
           <form ref={form} onSubmit={sendEmail}>
             <input type="text" name='name' placeholder='Il Tuo Nome Completo' required />

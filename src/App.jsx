@@ -10,10 +10,6 @@ import Testimonial from './components/testimonial/Testimonial.jsx'
 import Contatti from './components/contatti/Contatti.jsx'
 import Footer from './components/footer/Footer.jsx'
 
-
-
-
-
 const App = () => {
   return (
     <>
