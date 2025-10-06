@@ -13,11 +13,11 @@ const Footer = () => {
       <div className="footer__me">       
           <img src={ME} alt="footer_image"></img>
       </div>
-      <a href="#" className="footer__name">Carmine <span className="text-light"><br />Plaitano</span></a>
+      <a href="#top" className="footer__name">Carmine <span className="text-light"><br />Plaitano</span></a>
       </div>
 
       <ul className="permalinks">
-        <li><a href="#">Home</a></li>
+        <li><a href="#top">Home</a></li>
         <li><a href="#chi-sono">Chi Sono</a></li>
         <li><a href="#esperienze">Esperienza</a></li>
         <li><a href="#servizi">Servizi</a></li>
