@@ -1,18 +1,17 @@
 import React from 'react'
 import './footer.css'
-import ME from '../../assets/me.png'
 import { FaFacebookF } from 'react-icons/fa'
 import { FiInstagram } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa'
 
 
 const Footer = () => {
+    let currentYear = new Date().getFullYear();
+
   return (
     <footer>
 <div className="footer__bio">
-      <div className="footer__me">       
-          <img src={ME} alt="footer_image"></img>
-      </div>
+
       <a href="#top" className="footer__name">Carmine <span className="text-light"><br />Plaitano</span></a>
       </div>
 
@@ -39,7 +38,9 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; Carmine Plaitano - 2022. Tutti i diritti sono riservati</small>
+        <small>Carmine Plaitano &copy;  {currentYear} - All rights reserved.</small>
+        <br />
+        <small>P.IVA: 06247250654</small>
       </div>
     </footer>
   )
