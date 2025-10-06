@@ -1,0 +1,51 @@
+name: Deploy master → host (tests → build → sftp deploy)
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test -- --watchAll=false --passWithNoTests --ci
+
+  build-and-deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to host via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: sftp
+          local-dir: build
+          remote-dir: ${{ secrets.REMOTE_DIR }}
