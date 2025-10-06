@@ -21,7 +21,7 @@
     --container-width-md: 86%;
     --container-width-sm: 90%;
 
-    --transition: all 400 ease;
+    --transition: all 100ms ease-in-out;
 }
 
 html {
@@ -69,7 +69,7 @@ p {
 }
 
 section {
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 
 section>h2, section>h5 {
@@ -137,10 +137,6 @@ img {
 @media screen and (max-width: 1024px) {
     .container {
         width: var(--container-width-md);
-    }
-
-    section {
-        margin-top: 6rem;
     }
 }
 
