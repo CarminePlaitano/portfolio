@@ -70,7 +70,13 @@ jobs:
           PORT="${SSH_PORT:-22}"
           echo "Running rsync dry-run to ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR} (port $PORT)"
           RSYNC_RSH="ssh -p ${PORT} -o StrictHostKeyChecking=yes"
-          rsync -avz --delete --dry-run -e "$RSYNC_RSH" build/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
+          rsync -avz --delete --dry-run \
+          --exclude='.ssh' \
+          --exclude='.bash_history' \
+          --exclude='logs' \
+          --exclude='*.log*' \
+          -e "$RSYNC_RSH" \
+          build/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
 
       - name: Deploy with rsync
         env:
@@ -84,4 +90,10 @@ jobs:
           echo "Deploying build/ to ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR} (port $PORT)"
           # use StrictHostKeyChecking=yes to ensure we use known_hosts; change to no only as last resort
           RSYNC_RSH="ssh -p ${PORT} -o StrictHostKeyChecking=yes"
-          rsync -avz --delete -e "$RSYNC_RSH" build/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
+          rsync -avz --delete \
+          --exclude='.ssh' \
+          --exclude='.bash_history' \
+          --exclude='logs' \
+          --exclude='*.log*' \
+          -e "$RSYNC_RSH" \
+          build/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
