@@ -47,9 +47,7 @@ const Contatti = () => {
             <input type="text" name='name' placeholder='Il Tuo Nome Completo' required />
             <input type="email" name='email' placeholder='La Tua Email' required />
             <textarea name="message" rows="7" placeholder='Il Tuo Messaggio' required></textarea>
-            <a>
             <button type='submit' className='btn btn-primary form__button'>Invia Messaggio</button>
-            </a>
           </form>
         </div>
       </section>

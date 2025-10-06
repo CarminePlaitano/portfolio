@@ -1,4 +1,4 @@
-name: Deploy master → host (tests → build → sftp deploy)
+name: Deploy master → host (tests → build → rsync deploy)
 
 on:
   push:
@@ -13,20 +13,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
-      - uses: actions/setup-node@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'npm'
-      - run: npm ci
-      - run: npm test -- --watchAll=false --passWithNoTests --ci
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test -- --watchAll=false --passWithNoTests --ci
 
   build-and-deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -40,12 +49,51 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to host via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: Set up SSH agent
+        uses: webfactory/ssh-agent@v0.8.0
         with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          protocol: sftp
-          local-dir: build
-          remote-dir: ${{ secrets.REMOTE_DIR }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add known_hosts from secret
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Dry-run rsync (preview)
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
+        run: |
+          PORT="${SSH_PORT:-22}"
+          echo "Running rsync dry-run to ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR} (port $PORT)"
+          RSYNC_RSH="ssh -p ${PORT} -o StrictHostKeyChecking=yes"
+          rsync -avz --delete --dry-run \
+          --exclude='.ssh' \
+          --exclude='.bash_history' \
+          --exclude='logs' \
+          --exclude='*.log*' \
+          -e "$RSYNC_RSH" \
+          build/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
+
+      - name: Deploy with rsync
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
+        run: |
+          set -e
+          PORT="${SSH_PORT:-22}"
+          echo "Deploying build/ to ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR} (port $PORT)"
+          # use StrictHostKeyChecking=yes to ensure we use known_hosts; change to no only as last resort
+          RSYNC_RSH="ssh -p ${PORT} -o StrictHostKeyChecking=yes"
+          rsync -avz --delete \
+          --exclude='.ssh' \
+          --exclude='.bash_history' \
+          --exclude='logs' \
+          --exclude='*.log*' \
+          -e "$RSYNC_RSH" \
+          build/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
