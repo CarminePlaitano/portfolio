@@ -76,7 +76,7 @@ jobs:
           --exclude='logs' \
           --exclude='*.log*' \
           -e "$RSYNC_RSH" \
-          build/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
+          dist/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
 
       - name: Deploy with rsync
         env:
@@ -96,4 +96,4 @@ jobs:
           --exclude='logs' \
           --exclude='*.log*' \
           -e "$RSYNC_RSH" \
-          build/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
+          dist/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
