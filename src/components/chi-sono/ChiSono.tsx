@@ -1,4 +1,3 @@
-import React from 'react'
 import './chi-sono.css'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
