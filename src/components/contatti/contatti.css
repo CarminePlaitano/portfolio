@@ -71,7 +71,6 @@ input, textarea {
 .form__button {
     font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
-    background-color: #FFF;
     -webkit-box-shadow: 5px 5px 31px 9px #B7B7B7;
     -moz-box-shadow: 5px 5px 31px 9px #B7B7B7;
     -o-box-shadow: 5px 5px 31px 9px #B7B7B7;
