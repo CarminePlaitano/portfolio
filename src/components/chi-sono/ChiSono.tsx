@@ -1,10 +1,8 @@
 import { FaAward } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
 import { VscFolderLibrary } from 'react-icons/vsc'
-import { useTranslation } from 'react-i18next';
 
 const ChiSono = () => {
-   const { t } = useTranslation();
 
    return (
       <section id="chi-sono">
@@ -15,7 +13,7 @@ const ChiSono = () => {
                <div className="chi-sono__cards">
                   <div className="chi-sono__card">
                      <FaAward className="chi-sono__icon"/>
-                     <h4>{t('Welcome to React')}Esperienza</h4>
+                     <h4>Esperienza</h4>
                      <small>3+ Anni</small>
                   </div>
 

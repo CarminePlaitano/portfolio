@@ -18,12 +18,12 @@ i18n
       resources: {
          en: {
             translation: {
-               "Welcome to React": "Damn Pippus "
+               "Welcome to React": "Welcome to React"
             }
          },
          it: {
             translation: {
-               "Welcome to React": "Porco Pippo "
+               "Welcome to React": "Benvenuto su React"
             }
          }
       },

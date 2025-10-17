@@ -1,13 +1,13 @@
-@import '../../components/chi-sono/chi-sono';
-@import '../../components/contatti/contatti';
-@import '../../components/esperienze/esperienze';
-@import '../../components/footer/footer';
-@import '../../components/header/header';
-@import '../../components/logo/logo';
-@import '../../components/nav/nav';
-@import '../../components/portfolio/portfolio';
-@import '../../components/servizi/servizi';
-@import '../../components/testimonial/testimonial';
+@use '../../components/chi-sono/chi-sono';
+@use '../../components/contatti/contatti';
+@use '../../components/esperienze/esperienze';
+@use '../../components/footer/footer';
+@use '../../components/header/header';
+@use '../../components/logo/logo';
+@use '../../components/nav/nav';
+@use '../../components/portfolio/portfolio';
+@use '../../components/servizi/servizi';
+@use '../../components/testimonial/testimonial';
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,500;1,600&display=swap');
 
 * {
