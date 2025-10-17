@@ -1,0 +1,115 @@
+.esperienze__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.esperienze__container > div {
+  background: #fff;
+  border-radius: 2rem;
+  border: 1px solid;
+  overflow: hidden;
+  transition: var(--transition);
+  -webkit-box-shadow: 5px 5px 31px 9px #B7B7B7;
+  -moz-box-shadow: 5px 5px 31px 9px #B7B7B7;
+  -o-box-shadow: 5px 5px 31px 9px #B7B7B7;
+  box-shadow: 5px 5px 31px 9px #B7B7B7;
+}
+
+.esperienze__container > div:hover {
+  border: 2px solid;
+  border-color: var(--color-primary);
+  -webkit-box-shadow: inset 5px 0px 19px 5px #E2E2E2;
+  -moz-box-shadow: inset 5px 0px 19px 5px #E2E2E2;
+  -o-box-shadow: inset 5px 0px 19px 5px #E2E2E2;
+  box-shadow: inset 5px 0px 19px 5px #E2E2E2;
+}
+
+.esperienze__head {
+  background: var(--color-primary);
+  border-radius: 0;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 999;
+}
+
+
+.esperienze__head h3 {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.esperienze__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.esperienze__dettagli {
+  display: flex;
+  gap: 1rem;
+  padding: 0 3rem;
+}
+
+.esperienze__dettagli-text > h4 {
+  font-size: 0.95rem !important;
+}
+
+.esperienze__dettagli-text > small {
+  font-size: 0.75rem !important;
+}
+
+.esperienze__dettagli-icon {
+  margin-top: 6px;
+  color: var(--color-primary);
+}
+
+@media screen and (max-width: 1024px) {
+  .esperienze__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    width: 80%;
+  }
+
+  .esperienze__content {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+  }
+
+  .esperienze__dettagli {
+    position: relative;
+    gap: 1rem;
+    padding: 0 1rem;
+    display: flex;
+    width: fit-content;
+  }
+
+
+  .esperienze__dettagli-text > h4 {
+    font-size: 0.95rem !important;
+  }
+
+  .esperienze__dettagli-text > small {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .esperienze__content {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+  }
+
+  .esperienze__dettagli-text > h4 {
+    font-size: 0.85rem !important;
+  }
+
+  .esperienze__dettagli-text > small {
+    font-size: 0.65rem !important;
+  }
+}
