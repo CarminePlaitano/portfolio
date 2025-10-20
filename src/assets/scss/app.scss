@@ -1,13 +1,12 @@
-@use '../../components/chi-sono/chi-sono';
-@use '../../components/contatti/contatti';
-@use '../../components/esperienze/esperienze';
-@use '../../components/footer/footer';
-@use '../../components/header/header';
-@use '../../components/logo/logo';
-@use '../../components/nav/nav';
-@use '../../components/portfolio/portfolio';
-@use '../../components/servizi/servizi';
-@use '../../components/testimonial/testimonial';
+@use './sections/nav';
+@use './sections/intro';
+@use './sections/about-me';
+@use './sections/contatti';
+@use './sections/esperienze';
+@use './sections/footer';
+@use './sections/portfolio';
+@use './sections/servizi';
+@use './sections/testimonial';
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,500;1,600&display=swap');
 
 * {
@@ -43,8 +42,8 @@ body {
   background: var(--color-bg);
   color: #2a2a2a;
   line-height: 1.7em;
-  background: rgb(208, 218, 224);
-  background: linear-gradient(270deg, rgba(208, 218, 224, 1) 0%, rgba(226, 235, 240, 1) 50%);
+  background: rgba(244, 251, 213, 0.229);
+  // background: linear-gradient(270deg, rgba(208, 218, 224, 1) 0%, rgba(226, 235, 240, 1) 50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,7 +56,11 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 500;
 }
 
@@ -82,12 +85,13 @@ section {
   margin-top: 5rem;
 }
 
-section > h2, section > h5 {
+section>h2,
+section>h5 {
   text-align: center;
   color: var(--color-light);
 }
 
-section > h2 {
+section>h2 {
   color: var(--color-primary);
   margin-bottom: 3rem;
 }
@@ -140,6 +144,31 @@ img {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+.small-card {
+  background: var(--color-bg-variant);
+  color: #FFF;
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  -webkit-box-shadow: 5px 5px 10px 9px #B7B7B7;
+  -moz-box-shadow: 5px 5px 10px 9px #B7B7B7;
+  -o-box-shadow: 5px 5px 10px 9px #B7B7B7;
+  box-shadow: 5px 5px 10px 9px #B7B7B7;
+
+  &_icon {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  small {
+  font-size: 1rem;
+  color: #2a2a2a;
+  }
 }
 
 /* MEDIA QUERIES */
