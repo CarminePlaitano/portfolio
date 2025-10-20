@@ -1,21 +1,19 @@
-import Header from "../components/header/Header.tsx";
-import Nav from "../components/nav/Nav.tsx";
-import Logo from "../components/logo/Logo.tsx";
-import ChiSono from "../components/chi-sono/ChiSono.tsx";
-import Esperienze from "../components/esperienze/Esperienze.tsx";
-import Servizi from "../components/servizi/Servizi.tsx";
-import Portfolio from "../components/portfolio/Portfolio.tsx";
-import Testimonial from "../components/testimonial/Testimonial.tsx";
-import Contatti from "../components/contatti/Contatti.tsx";
-import Footer from "../components/footer/Footer.tsx";
+import Nav from "../components/Nav.tsx";
+import AboutMe from "../components/AboutMe.tsx";
+import Esperienze from "../components/Esperienze.tsx";
+import Servizi from "../components/Servizi.tsx";
+import Portfolio from "../components/Portfolio.tsx";
+import Testimonial from "../components/Testimonial.tsx";
+import Contatti from "../components/Contatti.tsx";
+import Footer from "../components/Footer.tsx";
+import Intro from "../components/Intro.tsx";
 
 export default function Homepage() {
    return (
       <>
-         <Header/>
          <Nav/>
-         <Logo/>
-         <ChiSono/>
+         <Intro/>
+         <AboutMe/>
          <Esperienze/>
          <Servizi/>
          <Portfolio/>
