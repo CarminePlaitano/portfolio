@@ -1,0 +1,115 @@
+/* =========================================================
+   UTILS.GENERAL.CSS - General Utilities
+   ========================================================= */
+
+/* ==========================
+   Text Utilities
+   ========================== */
+
+/* Align text */
+.text-left   { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right  { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+
+/* Text transform */
+.text-uppercase { text-transform: uppercase !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+/* Font weight */
+.fw-light   { font-weight: 300 !important; }
+.fw-normal  { font-weight: 400 !important; }
+.fw-bold    { font-weight: 700 !important; }
+
+/* Font style */
+.f-italic { font-style: italic !important; }
+.f-normal { font-style: normal !important; }
+
+/* Text decoration */
+.text-decoration-none      { text-decoration: none !important; }
+.text-decoration-underline { text-decoration: underline !important; }
+.text-decoration-line-through { text-decoration: line-through !important; }
+
+/* ==========================
+   Visibility
+   ========================== */
+.visible    { visibility: visible !important; }
+.invisible  { visibility: hidden !important; }
+
+/* ==========================
+   Float
+   ========================== */
+.float-start { float: left !important; }
+.float-end   { float: right !important; }
+.float-none  { float: none !important; }
+
+/* ==========================
+   Overflow
+   ========================== */
+.overflow-auto    { overflow: auto !important; }
+.overflow-hidden  { overflow: hidden !important; }
+.overflow-visible { overflow: visible !important; }
+.overflow-scroll  { overflow: scroll !important; }
+
+/* ==========================
+   Cursor
+   ========================== */
+.cursor-pointer { cursor: pointer !important; }
+.cursor-default { cursor: default !important; }
+.cursor-move    { cursor: move !important; }
+.cursor-not-allowed { cursor: not-allowed !important; }
+
+/* ==========================
+   User Select
+   ========================== */
+.user-select-all     { user-select: all !important; }
+.user-select-auto    { user-select: auto !important; }
+.user-select-none    { user-select: none !important; }
+.user-select-text    { user-select: text !important; }
+
+/* ==========================
+   Float Clear
+   ========================== */
+.clearfix::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+/* ==========================
+   Pointer Events
+   ========================== */
+.pointer-events-none { pointer-events: none !important; }
+.pointer-events-auto { pointer-events: auto !important; }
+
+/* ==========================
+   Text Overflow
+   ========================== */
+.text-truncate {
+   overflow: hidden !important;
+   text-overflow: ellipsis !important;
+   white-space: nowrap !important;
+}
+
+/* ==========================
+   Whitespace
+   ========================== */
+.text-wrap   { white-space: normal !important; }
+.text-nowrap { white-space: nowrap !important; }
+.text-break  { word-break: break-word !important; }
+
+/* ==========================
+   Float Helpers for RTL/LTR
+   ========================== */
+.float-start-rtl { float: right !important; }
+.float-end-rtl   { float: left !important; }
+
+/* ==========================
+   Small Helpers
+   ========================== */
+.shadow-none    { box-shadow: none !important; }
+.visible-sm     { display: none !important; }
+@media (min-width: 576px) {
+    .visible-sm { display: block !important; }
+}

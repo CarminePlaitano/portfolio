@@ -1,0 +1,48 @@
+.contact-me {
+
+  &_form-container {
+
+    &_form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      &_input,
+      &_textarea {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background: transparent;
+        border: 2px solid var(--clr-blue);
+        resize: none;
+        color: var(--color-white);
+      }
+
+      &_textarea {
+        min-height: 150px;
+      }
+
+      &_button {
+        font-family: 'Work Sans', sans-serif;
+        align-self: flex-end;
+        font-size: 1rem;
+        -webkit-box-shadow: 5px 5px 31px 9px var(--clr-gray-shadow);
+        -moz-box-shadow: 5px 5px 31px 9px var(--clr-gray-shadow);
+        -o-box-shadow: 5px 5px 31px 9px var(--clr-gray-shadow);
+        box-shadow: 5px 5px 31px 9px var(--clr-gray-shadow);
+      }
+
+      &_button:hover {
+        background: #FFF;
+        color: var(--clr-red);
+        border: 1px solid var(--clr-red);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form button {
+    display: flex;
+  }
+}

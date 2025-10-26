@@ -50,29 +50,31 @@ const testimonials = [
 
 const Testimonial = () => {
    return (
-      <section id="testimonial">
-         <h3>Recensioni</h3>
-         <h2>Testimonials</h2>
+      <section id="testimonials" className="testimonials">
+         <h3 className="text-center subtitle">Reviews from</h3>
+         <h2 className="text-center title mb-5">Testimonials</h2>
 
-         <Swiper className="container testimonials__container"
-                 modules={[Pagination]}
-                 spaceBetween={1000}
-                 slidesPerView={1}
-                 pagination={{clickable: true}}>
-            {
-               testimonials.map(({id, image, title, review}) => {
-                  return (
-                     <SwiperSlide key={id} className="testimonial">
-                        <div className="client__avatar">
-                           <img src={image} alt={title}/>
-                        </div>
-                        <h5 className="client__name">{title}</h5>
-                        <small className="client__review">{review}</small>
-                     </SwiperSlide>
-                  )
-               })
-            }
-         </Swiper>
+         <div className="testimonials_container">
+            <Swiper className="testimonials_container_slider"
+               modules={[Pagination]}
+               spaceBetween={1000}
+               slidesPerView={1}
+               pagination={{ clickable: true }}>
+               {
+                  testimonials.map(({ id, image, title, review }) => {
+                     return (
+                        <SwiperSlide key={id} className="testimonials_container_slider_slide">
+                           <div className="testimonials_container_slider_slide_avatar">
+                              <img src={image} alt={title} />
+                           </div>
+                           <h5 className="testimonials_container_slider_slide_name">{title}</h5>
+                           <small className="testimonials_container_slider_slide_review">{review}</small>
+                        </SwiperSlide>
+                     )
+                  })
+               }
+            </Swiper>
+         </div>
       </section>
    )
 }

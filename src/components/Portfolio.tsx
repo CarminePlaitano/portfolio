@@ -47,28 +47,26 @@ const data = [
 const Portfolio = () => {
    return (
       <section id="portfolio">
-         <h3>I miei Lavori più recenti</h3>
-         <h2>Portfolio</h2>
+         <h3 className="subtitle">I miei Lavori più recenti</h3>
+         <h2 className="title">Portfolio</h2>
 
-         <div className="container portfolio__container">
+         <div className="container portfolio_container">
 
-            {
-               data.map(({id, image, title, demo}) => {
+            { data.map(({id, image, title, demo}) => {
                   return (
-                     <div key={id} className="portfolio__item">
-                        <div className="portfolio__item-image">
+                     <div key={id} className="portfolio_item">
+                        <div className="portfolio_item-image">
                            <img src={image} alt={title}/>
                         </div>
 
                         <h3>{title}</h3>
-                        <div className="portfolio__item-cta">
+                        <div className="portfolio_item-cta">
                            <a href={demo} className="btn btn-primary" target="_blank" rel="noreferrer">Vai al
                               Sito</a>
                         </div>
                      </div>
                   )
-               })
-            }
+               }) }
 
          </div>
       </section>
