@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 220 60"
+     preserveAspectRatio="none"
+     role="img"
+     aria-hidden="true">
+  <title>Button backdrop</title>
+  <desc>SVG backdrop with a rounded frame and decorative blob; ids: frame, blob, stop1, stop2</desc>
+
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" gradientUnits="objectBoundingBox">
+      <stop id="stop1" offset="0%" stop-color="#ff6b6b"/>
+      <stop id="stop2" offset="100%" stop-color="#f7c948"/>
+    </linearGradient>
+  </defs>
+
+  <!-- stroke/frame with id -->
+  <rect id="frame" x="4" y="4" width="212" height="52" rx="12" ry="12"
+        fill="none" stroke="#111111" stroke-width="2" />
+
+  <!-- decorative blob -->
+  <path id="blob" d="M10,30 C30,10 70,5 110,20 C150,35 190,30 210,20 L210,55 L10,55 Z"
+        fill="transparent" />
+
+  <!-- optional invisible rect to ensure consistent aspect in some loaders -->
+  <rect x="0" y="0" width="220" height="60" fill="transparent" />
+</svg>

@@ -28,10 +28,6 @@ nav {
     font-size: 1.5rem;
   }
 
-  a:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
-
   a.disabled {
     pointer-events: none;
     opacity: 0.5;
@@ -40,5 +36,11 @@ nav {
   a.active {
     background: var(--clr-blue);
     color: var(--clr-white-smoke);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  a:hover {
+    background: rgba(0, 0, 0, 0.3);
   }
 }
