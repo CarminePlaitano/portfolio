@@ -8,7 +8,8 @@ type SmallCardProps = {
     icon?: IconType;
     iconSize?: number | string;
     iconClassName?: string;
-    link?: string
+    link?: string;
+    target?: string;
 };
 
 const SmallCard: React.FC<SmallCardProps> = ({
@@ -19,10 +20,11 @@ const SmallCard: React.FC<SmallCardProps> = ({
     iconSize = 24,
     iconClassName = "",
     link,
+    target
 }) => {
     if (link) {
         return (
-            <a href={link} className={`small-card ${className}`.trim()}>
+            <a href={link} target={target} className={`small-card ${className}`.trim()}>
                 {Icon && <Icon className={`small-card_icon ${iconClassName}`.trim()} size={iconSize} />}
                 <h4>{title}</h4>
                 {subtitle && <small>{subtitle}</small>}
