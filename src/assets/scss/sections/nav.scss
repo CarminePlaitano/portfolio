@@ -11,10 +11,13 @@ nav {
   z-index: 999;
   background: rgba(255, 255, 255, 0.29);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.4px);
-  -webkit-backdrop-filter: blur(5.4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
 
   a {
     background: transparent;
@@ -25,6 +28,10 @@ nav {
     font-size: 1.5rem;
   }
 
+  a:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
   a.disabled {
     pointer-events: none;
     opacity: 0.5;
@@ -33,9 +40,5 @@ nav {
   a.active {
     background: var(--clr-blue);
     color: var(--clr-white-smoke);
-  }
-
-  a:hover {
-    background: rgba(0, 0, 0, 0.3);
   }
 }
