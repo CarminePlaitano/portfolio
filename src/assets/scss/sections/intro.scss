@@ -24,7 +24,7 @@
     }
 
     &_photo {
-      width: 22rem;
+      width: 20rem;
       max-width: 100%;
       filter: drop-shadow(3px 0 var(--clr-blue)) drop-shadow(-3px 0 var(--clr-blue)) drop-shadow(0 3px var(--clr-blue)) drop-shadow(0 -3px var(--clr-blue));
     }
@@ -84,6 +84,16 @@
 
       &_socials {
         display: none;
+      }
+
+      &_text {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+
+      &_photo {
+        width: 16rem;
       }
     }
 
