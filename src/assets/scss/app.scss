@@ -1,15 +1,15 @@
-@use './sections/nav';
-@use './sections/intro';
 @use './sections/about-me';
-@use './sections/contacts';
+@use './sections/contact-me';
 @use './sections/footer';
-@use './sections/portfolio';
-@use './sections/servizi';
+@use './sections/intro';
+@use './sections/nav';
 @use './sections/testimonial';
+
 @use '../css/utils.general.css' as *;
 @use '../css/utils.display.css' as *;
 @use '../css/utils.sizing.css' as *;
 @use '../css/utils.spacing.css' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,500;1,600&display=swap');
 
 * {
@@ -194,6 +194,23 @@ img {
     background: var(--clr-red-light);
     color: #FFF;
     border: 1px solid var(--clr-red-light);
+  }
+}
+
+.lang-selector {
+  &_btn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 5px 10px;
+
+    img {
+      width: .85rem;
+      max-width: 15px;
+      height: .85rem;
+      max-height: 15px;
+      box-sizing: border-box;
+    }
   }
 }
 

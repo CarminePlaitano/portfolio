@@ -49,6 +49,15 @@
         background: var(--clr-red);
       }
     }
+
+    .lang-selector {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      gap: .5rem;
+    }
   }
 
   &_logo {

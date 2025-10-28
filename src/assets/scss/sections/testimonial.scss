@@ -1,5 +1,5 @@
 .testimonials {
-  margin: 150px auto 250px;
+  margin: 150px auto;
   overflow: visible;
   height: 400px;
 
@@ -57,6 +57,7 @@
 
 @media screen and (max-width: 768px) {
   .testimonials {
+    margin: 150px auto 250px;
 
     &_container {
 
