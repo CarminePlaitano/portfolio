@@ -6,6 +6,7 @@ import cpCv from 'assets/CarminePlaitano-CV(EN).pdf';
 import Button from './ui/Button';
 import { useTranslation } from 'react-i18next';
 import cpLogo from 'assets/image/cp_logo.png';
+import LanguageSelector from './ui/LangSelector';
 
 const Intro = () => {
 
@@ -27,6 +28,7 @@ const Intro = () => {
                   <a href="https://github.com/CarminePlaitano" target="_blank" rel="noreferrer"><BsGithub /></a>
                   <a href="https://www.instagram.com/carmineplaitano.it/" target="_blank" rel="noreferrer"><BsInstagram /></a>
                </div>
+                  <LanguageSelector />
             </div>
             <img className="intro_container_photo" src={cpAvatar} alt="me" />
          </div>

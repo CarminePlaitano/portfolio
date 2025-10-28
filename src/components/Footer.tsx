@@ -1,8 +1,11 @@
 import { FaFacebookF } from 'react-icons/fa'
 import { FiInstagram } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+   const { t } = useTranslation();
+
    let currentYear = new Date().getFullYear();
 
    return (
@@ -14,12 +17,12 @@ const Footer = () => {
 
          <ul className="permalinks">
             <li><a href="#top">Home</a></li>
-            <li><a href="#about-me">About me</a></li>
+            <li><a href="#about-me">{t("About me")}</a></li>
             {/* <li><a href="#esperienze">Esperienze</a></li> */}
             {/* <li><a href="#servizi">Servizi</a></li> */}
             {/* <li><a href="#portfolio">Portfolio</a></li> */}
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact-me">Contact me</a></li>
+            <li><a href="#testimonials">{t("Testimonials")}</a></li>
+            <li><a href="#contact-me">{t("Contact me")}</a></li>
          </ul>
 
          <div className="footer_socials">

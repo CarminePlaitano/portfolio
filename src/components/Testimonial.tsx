@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { useTranslation } from 'react-i18next'
 
 const testimonials = [
    {
@@ -49,10 +50,12 @@ const testimonials = [
 ]
 
 const Testimonial = () => {
+   const { t } = useTranslation();
+
    return (
       <section id="testimonials" className="testimonials">
-         <h3 className="text-center subtitle">Reviews from</h3>
-         <h2 className="text-center title mb-5">Testimonials</h2>
+         <h3 className="text-center subtitle">{t("Reviews and")}</h3>
+         <h2 className="text-center title mb-5">{t("Testimonials")}</h2>
 
          <div className="testimonials_container">
             <Swiper className="testimonials_container_slider"
