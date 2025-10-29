@@ -76,8 +76,8 @@ jobs:
           rsync -avz --delete --dry-run \
           --exclude='.ssh' \
           --exclude='.bash_history' \
+          --exclude='backend' \
           --exclude='logs' \
-          --exclude='*.log*' \
           -e "$RSYNC_RSH" \
           dist/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
 
@@ -96,7 +96,7 @@ jobs:
           rsync -avz --delete \
           --exclude='.ssh' \
           --exclude='.bash_history' \
+          --exclude='backend' \
           --exclude='logs' \
-          --exclude='*.log*' \
           -e "$RSYNC_RSH" \
           dist/ "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}"
