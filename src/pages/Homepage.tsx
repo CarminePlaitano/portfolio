@@ -11,8 +11,6 @@ export default function Homepage() {
          <Navbar/>
          <Intro/>
          <AboutMe/>
-         {/* <Services/> */}
-         {/* <Portfolio/> */}
          <Testimonial/>
          <ContactMe/>
          <Footer/>
