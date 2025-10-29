@@ -21,9 +21,9 @@ const AboutMe = () => {
                <SmallCard title={t("Projects")} subtitle={t("20+ Completed")} icon={VscFolderLibrary} />
             </div>
             <div className="about-me_container_text w-xl-50 mx-auto mt-2">
-               <p className="text-justify mb-2">{t("My name is Carmine Plaitano and I am a Full-Stack Web Developer with 3+ years of professional experience building maintainable web applications, pragmatic frontend interfaces and APIs using PHP (Symfony, Yii2), modern JavaScript and TypeScript (React, Angular), testing tools (Vitest, PHPUnit) and other useful technologies (Docker, Git, MySQL, PostgreSQL)")}.</p>
-               <p className="text-justify mb-4">{t("I am passionate about coding and web development and I am always looking for new challenges and opportunities to grow professionally") + "."}</p>
-               <Button href="#contacts" className="btn btn-primary mt-3 float-end">Let's Talk</Button>
+               <p className="text-justify mb-2">{t("My name is Carmine Plaitano and I am a Full-Stack Web Developer with 3+ years of professional experience building maintainable web applications, pragmatic frontend interfaces and APIs using PHP (Symfony, Yii2), modern JavaScript and TypeScript (React, Angular), testing tools (Vitest, PHPUnit) and other useful technologies (Docker, Git, MySQL, PostgreSQL).")}</p>
+               <p className="text-justify mb-4">{t("I am passionate about coding and web development and I am always looking for new challenges and opportunities to grow professionally.")}</p>
+               <Button href="#contacts" className="btn btn-primary mt-3 float-end">{t("Let's Talk")}</Button>
             </div>
          </div>
       </section>
