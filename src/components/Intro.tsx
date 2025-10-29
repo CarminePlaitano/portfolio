@@ -21,7 +21,7 @@ const Intro = () => {
                <h3>Full Stack Web Developer</h3>
                <div className="intro_container_cta">
                   <Button href={cpCv} className="btn" target="_blank">{ t("Read CV") }</Button>
-                  <Button href="#contact-me" className="btn btn-primary">{ t("Lets Talk") }</Button>
+                  <Button href="#contact-me" className="btn btn-primary">{ t("Let's Talk") }</Button>
                </div>
                <div className="intro_container_socials">
                   <a href="https://www.linkedin.com/in/carmine-plaitano-45b286218/" target="_blank" rel="noreferrer"><BsLinkedin /></a>
