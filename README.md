@@ -45,9 +45,6 @@
   ├─ vite.config.ts
   └─ README.md
   </pre>
-  <p>
-    Note: Languages shown by GitHub: TypeScript, CSS, SCSS, JavaScript, HTML.
-  </p>
 </section>
 
 <section>
