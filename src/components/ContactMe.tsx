@@ -1,17 +1,10 @@
 import { MdOutlineEmail } from 'react-icons/md'
 import { RiInstagramLine } from 'react-icons/ri'
 import { BsWhatsapp } from 'react-icons/bs'
-import type { FormEvent } from "react";
 import { useTranslation } from 'react-i18next';
 import SmallCard from './ui/SmallCard';
-import Button from './ui/Button';
 
 const ContactMe = () => {
-   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      e.currentTarget.reset();
-   };
-
    const { t } = useTranslation();
 
    return (
