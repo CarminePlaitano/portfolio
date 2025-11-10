@@ -1,4 +1,3 @@
-import { FaFacebookF } from 'react-icons/fa'
 import { FiInstagram } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next';
