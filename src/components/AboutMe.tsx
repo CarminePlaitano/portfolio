@@ -1,9 +1,4 @@
-import { FaAward } from 'react-icons/fa';
-import { FiUsers } from 'react-icons/fi';
-import { VscFolderLibrary } from 'react-icons/vsc';
 import { useTranslation } from 'react-i18next';
-import SmallCard from './ui/SmallCard';
-import Button from './ui/Button';
 
 const AboutMe = () => {
    const { t } = useTranslation();
