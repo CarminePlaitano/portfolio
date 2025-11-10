@@ -2,6 +2,7 @@ import { FaFacebookF } from 'react-icons/fa'
 import { FiInstagram } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next';
+import { BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
    const { t } = useTranslation();
@@ -18,23 +19,14 @@ const Footer = () => {
          <ul className="permalinks">
             <li><a href="#top">Home</a></li>
             <li><a href="#about-me">{t("About me")}</a></li>
-            {/* <li><a href="#esperienze">Esperienze</a></li> */}
-            {/* <li><a href="#servizi">Servizi</a></li> */}
-            {/* <li><a href="#portfolio">Portfolio</a></li> */}
             <li><a href="#testimonials">{t("Testimonials")}</a></li>
             <li><a href="#contact-me">{t("Contact me")}</a></li>
          </ul>
 
          <div className="footer_socials">
-            <a href="https://www.linkedin.com/in/carmine-plaitano-45b286218/">
-               <FaLinkedinIn/>
-            </a>
-            <a href="https://www.instagram.com/carmineplaitano.webp/">
-               <FiInstagram/>
-            </a>
-            <a href="https://www.facebook.com/carmineplaitano.webp/">
-               <FaFacebookF/>
-            </a>
+            <a href="https://www.linkedin.com/in/carmine-plaitano-45b286218/" target="_blank" rel="noreferrer"><FaLinkedinIn/></a>
+            <a href="https://github.com/CarminePlaitano" target="_blank" rel="noreferrer"><BsGithub /></a>
+            <a href="https://www.instagram.com/carmineplaitano.it/" target="_blank" rel="noreferrer"><FiInstagram/></a>
          </div>
 
          <div className="footer_copyright">
