@@ -41,6 +41,12 @@ nav {
 
 @media screen and (min-width: 768px) {
   a:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0);
+    color: var(--clr-blue);
+    border-color: var(--clr-red);
+
+    h4 {
+      color: var(--clr-red);
+    }
   }
 }
