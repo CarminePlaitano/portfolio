@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 import Homepage from './pages/Homepage.tsx';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import translations_en from '../public/locales/en/translation.json';
-import translations_it from '../public/locales/it/translation.json';
+import translations_en from '../public/locales/en.translation.json';
+import translations_it from '../public/locales/it.translation.json';
 
 function App() {
    initTranslations();
