@@ -14,7 +14,7 @@
 ---
 
 <section>
-  <h2>About</h2>
+  <h2>📘 About</h2>
   <p>
     This repository contains the source code of my personal portfolio website. It showcases my recent work, contact information,
     and links to projects and social profiles. The site is implemented using <strong>React</strong> + <strong>TypeScript</strong>,
@@ -23,18 +23,18 @@
 </section>
 
 <section>
-  <h2>Highlights</h2>
+  <h2>🧩 Highlights</h2>
   <ul>
     <li>Modern front-end stack: React + TypeScript + Vite</li>
     <li>Localized content using <code>i18next</code></li>
     <li>SCSS and modular styling</li>
     <li>Fast dev server and optimized builds</li>
-    <li>Designed to be easily deployed to Vercel / Netlify / any static host</li>
+    <li>CI/CD with GitHub Actions for promoting dev to stage and deploy master to remote host</li>
   </ul>
 </section>
 
 <section>
-  <h2>Repository structure</h2>
+  <h2>🗂 Repository structure</h2>
   <pre>
   .
   ├─ .github/               # CI / workflows
@@ -48,7 +48,7 @@
 </section>
 
 <section>
-  <h2>Getting started — run locally</h2>
+  <h2>🚀 Getting started — run locally</h2>
 
   <details>
     <summary><strong>Prerequisites</strong></summary>
