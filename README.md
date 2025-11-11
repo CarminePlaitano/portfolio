@@ -29,7 +29,7 @@
     <li>Localized content using <code>i18next</code></li>
     <li>SCSS and modular styling</li>
     <li>Fast dev server and optimized builds</li>
-    <li>Designed to be easily deployed to Vercel / Netlify / any static host</li>
+    <li>CI/CD with GitHub Actions for promoting dev to stage and deploy master to remote host</li>
   </ul>
 </section>
 
