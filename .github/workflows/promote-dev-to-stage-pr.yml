@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Run tests (CI)
-        run: npm test -- --passWithNoTests
+        run: npm run test:unit -- --passWithNoTests
 
   create-and-merge-pr:
     needs: test

@@ -29,7 +29,7 @@ jobs:
         run: npm i @rolldown/binding-linux-x64-gnu --no-save || true
 
       - name: Run tests
-        run: npm test -- --passWithNoTests
+        run: npm run test:unit -- --passWithNoTests
 
   build-and-deploy:
     needs: test
@@ -91,7 +91,6 @@ jobs:
           set -e
           PORT="${SSH_PORT:-22}"
           echo "Deploying build/ to ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR} (port $PORT)"
-          # use StrictHostKeyChecking=yes to ensure we use known_hosts; change to no only as last resort
           RSYNC_RSH="ssh -p ${PORT} -o StrictHostKeyChecking=yes"
           rsync -avz --delete \
           --exclude='.ssh' \
