@@ -5,7 +5,6 @@ import cpAvatar from 'assets/image/cp_photo.png';
 import cpCv from 'assets/CarminePlaitano-CV(EN).pdf';
 import Button from './ui/Button';
 import { useTranslation } from 'react-i18next';
-import cpLogo from 'assets/image/cp_logo.png';
 import LanguageSelector from './ui/LangSelector';
 
 const Intro = () => {
@@ -32,7 +31,6 @@ const Intro = () => {
             </div>
             <img className="intro_container_photo" src={cpAvatar} alt="me" />
          </div>
-         <img className="intro_logo" src={cpLogo} alt="logo_carmine-plaitano"/>
       </section>
    )
 }
