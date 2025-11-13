@@ -33,7 +33,7 @@
       }
 
       &_button:hover {
-        background: #FFF;
+        background: var(--clr-white);
         color: var(--clr-red);
         border: 1px solid var(--clr-red);
       }
