@@ -27,8 +27,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Ensure rolldown native binding
+        run: npm i @rolldown/binding-linux-x64-gnu --no-save || true
+
       - name: Run tests (CI)
-        run: npm run test:unit -- --passWithNoTests
+        run: npm run test:unit -- --run --passWithNoTests
 
   create-and-merge-pr:
     needs: test
