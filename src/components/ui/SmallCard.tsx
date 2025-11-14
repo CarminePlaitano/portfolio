@@ -1,5 +1,5 @@
 import React from "react";
-import type { SmallCardProps } from "src/shared/types/SmallCard";
+import type { SmallCardProps } from "src/shared/types/SmallCardProps";
 
 const SmallCard: React.FC<SmallCardProps> = ({
     title,
