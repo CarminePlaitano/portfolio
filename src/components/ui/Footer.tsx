@@ -12,11 +12,11 @@ const Footer = () => {
       <footer>
          <div className="footer_bio">
 
-            <a href="#top" className="footer_name">Carmine <span className="text-light"><br/>Plaitano</span></a>
+            <a href="#intro" className="footer_name">Carmine <span className="text-light"><br/>Plaitano</span></a>
          </div>
 
          <ul className="permalinks">
-            <li><a href="#top">Home</a></li>
+            <li><a href="#intro">Home</a></li>
             <li><a href="#about-me">{t("About me")}</a></li>
             <li><a href="#testimonials">{t("Testimonials")}</a></li>
             <li><a href="#contact-me">{t("Contact me")}</a></li>

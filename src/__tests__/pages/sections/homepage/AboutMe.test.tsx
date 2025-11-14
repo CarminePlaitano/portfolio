@@ -1,16 +1,15 @@
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import { describe, it, expect, vi } from 'vitest'
-import AboutMe from '../AboutMe'
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { describe, it, expect, vi } from 'vitest';
+import AboutMe from 'components/pages/sections/homepage/AboutMe';
 
-// Mock react-i18next
 vi.mock('react-i18next', () => ({
     useTranslation: () => ({
         t: (key: string) => key,
     }),
 }));
 
-describe('AboutMe component', () => {
+describe('AboutMe section', () => {
     it('renders section with id and classes', () => {
         const { container } = render(<AboutMe />);
         const section = container.querySelector('#about-me');
@@ -26,7 +25,6 @@ describe('AboutMe component', () => {
     it('renders headings and paragraphs with translation keys as text', () => {
         render(<AboutMe />);
 
-        // Our mock returns the key string, so we assert keys/text are present
         expect(screen.getByText('Something')).toBeInTheDocument();
         expect(screen.getByText('About me')).toBeInTheDocument();
 

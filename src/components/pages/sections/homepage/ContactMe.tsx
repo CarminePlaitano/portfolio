@@ -2,7 +2,7 @@ import { MdOutlineEmail } from 'react-icons/md'
 import { RiInstagramLine } from 'react-icons/ri'
 import { BsWhatsapp } from 'react-icons/bs'
 import { useTranslation } from 'react-i18next';
-import SmallCard from './ui/SmallCard';
+import SmallCard from '../../../ui/SmallCard';
 
 const ContactMe = () => {
    const { t } = useTranslation();
