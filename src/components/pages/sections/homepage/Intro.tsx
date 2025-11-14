@@ -12,7 +12,7 @@ const Intro = () => {
    const { t } = useTranslation();
 
    return (
-      <section id="top" className="intro">
+      <section id="intro" className="intro">
          <div className="container intro_container w-75">
             <div className="intro_container_text">
                <h3>{ t("Hey! I'm") }</h3>
