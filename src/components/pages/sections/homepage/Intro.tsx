@@ -1,11 +1,11 @@
 import { BsLinkedin } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
-import cpAvatar from '../assets/image/cp_photo.png';
-import cpCv from '../assets/CarminePlaitano-CV(EN).pdf';
-import Button from './ui/Button';
+import cpAvatar from 'assets/image/cp_photo.png';
+import cpCv from 'assets/CarminePlaitano-CV(EN).pdf';
+import Button from 'components/ui/Button';
 import { useTranslation } from 'react-i18next';
-import LanguageSelector from './ui/LangSelector';
+import LanguageSelector from 'components/ui/LangSelector';
 
 const Intro = () => {
 
